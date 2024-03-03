@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Tip Calculator</title>
+</head>
+    <body> 
+        <main>
+            <img src="./images/logo.svg" alt="Logo dolar">
+            <form>
+                <div>
+                    <div>
+                        <label class="text-title" for="input-bill">Bill</label>
+                        <div class="container-input">
+                            <img src="./images/icon-dollar.svg" alt="icon_dollar">
+                            <input type="text" placeholder="0" id="input-bill">
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-title">Select Tip %</p>
+                        <div class="container-percentage">
+                            <button>5%</button>
+                            <button>10%</button>
+                            <button>15%</button>
+                            <button>25%</button>
+                            <button>50%</button>
+                            <input type="text" placeholder="Custom"/>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="text-title" for="input-people">Number of people</label>
+                        <div class="container-input">
+                            <img src="./images/icon-person.svg" alt="input-people">
+                            <input type="text" placeholder="0" id="input-people">
+                        </div>
+                    </div>
+                </div>
+                <div class="second-square">
+                    <div>
+                        <div>
+                            <div>
+                                <p>Tip Amount</p>
+                                <span>/ person</span>
+                            </div>
+                            <div>
+                                <p>$ 0.00</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <p>Total</p>
+                                <span>/ person</span>
+                            </div>
+                            <div>
+                                <p>$ 0.00</p>
+                            </div>
+                        </div>
+                        <button>Reset</button>
+                    </div>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>

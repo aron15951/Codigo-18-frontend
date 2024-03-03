@@ -1,65 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        <h1>Hola mundo, soy Aron estoy aprendiendo a programar</h1>
-        <h2>Este es otro text</h2>
-        <h3>Ejemplo de H3</h3>
-        <h4>Ejemplo de H4</h4>
-        <h5>Ejemplo de H4</h5>
-        <h6>Ejemplo de H5</h6>
-    </div>
-    <div>
-        <p>
-            Hola estoy aprendiendo a <b>programar</b> y esto es un parrafo que me ayuda a <i>practicar</i>
-        </p>
-    </div>
-    <div>
-        <h3 aria-label="Usando imagenes de internet">Usando imagenes de internet
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aron Choque -  Software Developer - VML</title>
 
-        </h3>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./CSS/style.css">
+  </head>
+  <body>
+    <nav>
+      <div>
+        <img src="./images/logo-1.svg" 
+        width="35"
+        height="40"
+        alt="">
+      </div>
+      <div>
+        <ul class="nav-list flex">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Sobre mi</a>
+          </li>
+          <li>
+            <a href="#">Proyectos</a>
+          </li>
+          <li>
+            <a href="#">Hábilidades</a>
+          </li>
+          <li>
+            <a href="#">Carrera</a>
+          </li>
+          <li>
+            <a href="#">Recomendaciones</a>
+          </li>
+          <li>
+            <a href="#">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div>
+        <span class="gretting">👋 Saludos!</span>
+        <h1 class="tittle">Aron Choque</h1>
+        <p class="description">Software Developer</p>
+        <div class="social-links">
+          <a href=""><img src="./images/Group_1.svg" alt=""></a>
+          <a href=""><img src="./images/github_2.svg" alt=""></a>
+          <a href=""><img src="./images/behance.svg" alt=""></a>
+        </div>
+      </div>
+      <div class="container-profile">
         <img 
-            src="https://poptv.orange.es/wp-content/uploads/sites/3/2018/07/breaking-elenco-1100x619.jpg"
-            alt="Foto de Walt White"
-            width="80"
-            eight="80"
-        />
-        <a href="https://www.google.com" target="_blank">Google></a>
-
-        <a href="https://youtube.com" target="_blank">
-            <img src="https://poptv.orange.es/wp-content/uploads/sites/3/2018/07/breaking-elenco-1100x619.jpg"
-            alt="Foto de Walt White"
-            width="300"
-            eight="200"
+            src="./images/profile.jpeg" 
+            alt=" Aron Choque - Foto de perfil" 
             />
-        </a>
+      </div>
+      
+      <div class="container-contact">
+          <a href="#" class="align-center">
+            Descargar CV
+            <img src="./images/download.svg" alt="">
+          </a>
+      
+          <a href="" class="align-center">
+            <img src="./images/whatsapp.svg" alt="">
+            Vamos a conversar</a>
+      </div>
+    </main>
+    <hr class="divider">
+    <section>
+      <div class="container-cards">
+        <div>
+          <img src="./images/code-icon.svg" alt="">
+          <p>1 mes como</p>
+          <h5>Programador</h5>
+        </div>
+        <div>
+          <img src="./images/projects-icon.svg" alt="">
+          <p>1 mes desarrolando</p>
+          <h5>Projectos</h5>
+        </div>
+        <div>
+          <img src="./images/design-icon.svg" alt="">
+          <p>1 mes como</p>
+          <h5>Designer</h5>
+        </div>
+      </div>
+      <div class="container-tags">
+        <div>
+          <p>Developer</p>
+          <h5>Front-end</h5>
+        </div>
+        <div>
+          <p>Decenas de proyectos</p>
+          <h5>Experiencias</h5>
+        </div>
+        <div>
+          <p>Diseñador freelance e </p>
+          <h5>UI / UX</h5>
+        </div>
+      </div>
+    </section>
+    <hr class="divider">
+
+    <section class="about-me">
+      <div class="profile-photo">
+        <img 
+          src="./images/profile.jpeg" 
+          alt=" Aron Choque - Foto de perfil" 
+          />
+      </div>
+
+      <div>
+      <span class="gretting"> 🧐 Sobre mi!</span>
+      <h2>Aron Justo</h2>
+      <h2 class="mb-20">Choque Chauca</h2>
+      <p class="mt-20">👋 Hola! Me llamo Aron Justo Choque pero me pueden llamar Aron72.</p>
+      <p class="mt-20">👨‍💻 Soy un entusiasta de la tecnolgia  y me encanta la progamacion. </p>
+      <p class="mt-20">🎓 Soy bachiller en ingeniería mecánica y estudio desarrollo web actualmente.</p>
+      <p class="mt-20">✨ Espero al terminar el bootcamp poder insertarme al mundo laboral de la programación. </p>
     </div>
 
-    <div>
-        <h3>Listas ordenadas y no ordenadas</h3>
-        <p>Lista de lenguajes</p>
-        <ol>
-            <li>JavaScript</li>
-            <li>c++</li>
-            <li>TypeScript</li>
-            <li>Java</li>
-            <li>PHP</li>
-        </ol>
-
-        <p>Lista no ordenada de Frameworks </p>
-            <ul>
-                <li><a href="https://nodejs.org/en" target="_blank">NextJS</a></li>
-                <li>Larabel</li>
-                <li>Django</li>
-                <li>Flask</li>
-                <li>Swelte Kit</li>
-            </ul>
-    </div>
-    
-</body>
+    </section>
+  </body>
 </html>
