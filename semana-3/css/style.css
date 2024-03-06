@@ -9,6 +9,10 @@ body {
     font-family: "Fraunces", sans-serif;
 }
 
+.flex {
+    display: flex;
+}
+
 .font-barlow {
     font-family: "Barlow", sans-serif;
     font-weight: 600;
@@ -16,6 +20,22 @@ body {
 
 .text-center {
     text-align: center;
+}
+
+.bg-no-repeat {
+    background-repeat: no-repeat !important;
+}
+
+.bg-position-center {
+    background-position: center !important;
+}
+
+.bg-size-cover {
+    background-size: cover !important;
+}
+
+.h-50 {
+    height: 50vh !important;
 }
 
 .nav {
@@ -41,6 +61,9 @@ body {
 .menu {
     display: none;
 }
+
+.text-xl {
+    font-size: 38px !important; }
 
 main {
     background: url(../asset/mobile/image-header.jpg);
@@ -114,7 +137,7 @@ h1{
     height: 50vh;
     display: flex;
     flex-direction: column;
-     justify-content: center;
+    justify-content: center;
     padding: 16px;
 
 }
@@ -129,7 +152,70 @@ h1{
     color: hsl(232, 10%, 55%);
 }
 
+.bg-cherry {
+    background: url("../asset/mobile/image-graphic-design.jpg");
+    height: 80vh;
+    align-items: end;
+}
 
+.bg-cherry > div {
+    color: hsl(167, 40%, 24%);
+    padding: 5vh;
+}
+
+.bg-cherry > div > h2 {
+    margin-bottom: 20px;
+}
+
+.bg-orange {
+    background: url("../asset/mobile/image-photography.jpg");
+    height: 80vh;
+    align-items: end;
+}
+
+.bg-orange > div {
+    color: hsl(198, 62%, 26%);
+    padding: 5vh;
+}
+
+.bg-orange > div > h2 {
+    margin-bottom: 20px;
+}
+
+.section-testimonials {
+    padding-top: 60px;
+    background-color: #fffbf8;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.section-testimonials > h2 {
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: hsl(232, 10%, 55%);
+}
+
+.container-testimonials {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container-testimonials > div > img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-top: 30px;
+}
+
+.text-testimonials {
+    font-size: 18px;
+    width: 80%;
+    margin: auto;
+}
 /* sm */
 @media (min-width: 640px) {
 }
@@ -221,16 +307,41 @@ h1{
         height: 70vh;
     }
 
+    .container-fruit {
+        display: flex ;
+    }
+
+    .bg-cherry {
+        background: url("../asset/desktop/image-graphic-design.jpg");
+        height: 80vh;
+        align-items: end;
+        justify-content: center;
+    }
+
+    .bg-cherry > div {
+        display: block;
+        width: 70%;
+        margin-bottom: 5vh;
+    }
+
+    .bg-orange {
+        background: url("../asset/desktop/image-photography.jpg");
+        height: 80vh;
+        align-items: end;
+        justify-content: center;
+    }
+
+    .bg-orange > div {
+        display: block;
+        width: 70%;
+        margin-bottom: 5vh;
+    }
+    
+
 }
 /* lg */
-@media (min-width: 1024px) {
-
-
-}
+@media (min-width: 1024px) {}
 /* xl */
-@media (min-width: 1280px) {
-
-}
+@media (min-width: 1280px) {}
 /* 2xl */
-@media (min-width: 1536px) {
-}
+@media (min-width: 1536px) {}
