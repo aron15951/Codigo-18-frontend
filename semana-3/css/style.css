@@ -179,16 +179,16 @@ h1{
 }
 
 .bg-orange > div > h2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .section-testimonials {
-    padding-top: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: #fffbf8;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 40px;
 }
 
 .section-testimonials > h2 {
@@ -196,6 +196,7 @@ h1{
     text-transform: uppercase;
     letter-spacing: 5px;
     color: hsl(232, 10%, 55%);
+    
 }
 
 .container-testimonials {
@@ -216,6 +217,75 @@ h1{
     width: 80%;
     margin: auto;
 }
+
+.text-name-testimonials {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.container-testimonials > div > p {
+    margin-top: 20px;
+    color: hsl(232, 10%, 55%);
+}
+
+.section-mini {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-mini > div {
+    height: 200px;
+    width: 50%;
+}
+
+.bg-mini-milk {
+    background: url("../asset/mobile/image-gallery-milkbottles.jpg");
+}
+
+.bg-mini-orange {
+    background: url("../asset/mobile/image-gallery-orange.jpg");
+}
+
+.bg-mini-cone {
+    background: url("../asset/mobile/image-gallery-cone.jpg");
+}
+
+.bg-mini-sugar {
+    background: url("../asset/mobile/image-gallery-sugar-cubes.jpg");
+}
+
+.footer {
+    background-color: #90d4c5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.footer-logo {
+    width: 200px;
+    filter: invert(39%) sepia(6%) saturate(3640%) hue-rotate(116deg)
+    brightness(45%) contrast(86%);
+}
+
+.footer-menu {
+    list-style: none;
+    gap: 20px;
+}
+
+.footer-menu > li > a {
+    color: #2c7564;
+    text-decoration: none;
+}
+
+.footer-social-media {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
 /* sm */
 @media (min-width: 640px) {
 }
@@ -321,7 +391,7 @@ h1{
     .bg-cherry > div {
         display: block;
         width: 70%;
-        margin-bottom: 5vh;
+        margin-bottom: 0vh;
     }
 
     .bg-orange {
@@ -334,9 +404,44 @@ h1{
     .bg-orange > div {
         display: block;
         width: 70%;
-        margin-bottom: 5vh;
+    }
+
+    .section-testimonials {
+        height: 80vh;
+    }
+
+    .container-testimonials {
+        flex-direction: row;
+        
+    }
+
+    .section-mini {
+        display: flex;
+        
     }
     
+    .section-mini > div {
+        width: 25%;
+        height: 80vh;
+        
+    }
+
+    .bg-mini-milk {
+        background: url("../asset/desktop/image-gallery-milkbottles.jpg");
+    }
+    
+    .bg-mini-orange {
+        background: url("../asset/desktop/image-gallery-orange.jpg");
+    }
+    
+    .bg-mini-cone {
+        background: url("../asset/desktop/image-gallery-cone.jpg");
+    }
+    
+    .bg-mini-sugar {
+        background: url("../asset/desktop/image-gallery-sugarcubes.jpg");
+    }
+
 
 }
 /* lg */
