@@ -1,0 +1,97 @@
+/* md */
+@media (min-width: 768px) {
+    main {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #eef5ff;
+    }
+
+    .container {
+        height: auto;
+        display: flex;
+        padding: 20px;
+        border-radius: 14px;
+        gap: 50px;
+        background-color: #fff;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .contanier-steps {
+        display: none;
+    }
+
+    .button {
+        background-color: transparent;
+        color: #fff;
+        border: solid #fff 1px;
+        padding: 10px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        color: #000;
+        background-color: hsl(206, 94%, 87%);
+        border: none;
+    }
+
+    .container-menu-desktop {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        padding: 40px;
+        width: 300px;
+        background: url(../assets/desktop/bg-sidebar-desktop.svg);
+        background-size: cover;
+        border-radius: 14px;
+        color: #fff;
+        background-position: center;
+    }
+
+    .container-menu-desktop > div {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .step-title {
+        font-size: 10px;
+        font-weight: 200;
+        display: block;
+    }
+
+    .step-info {
+        font-size: 12px;
+        font-weight: bold;
+        display: block;
+    }
+
+    .container-info {
+        display: block;
+        position: static;
+        background-color: #fff;
+    }
+
+    .container-next-button-desktop {
+        margin-top: 10px;
+        position: relative;
+        display: block !important;
+    }
+    
+    .container-next-button-desktop > button {
+        width: 150px;
+        position: absolute;
+        right: 0;
+    }
+
+
+}
