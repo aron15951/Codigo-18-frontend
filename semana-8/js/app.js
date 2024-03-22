@@ -24,6 +24,22 @@ function validateIfInputIsEmpty() {
   }
 }
 
+function renderInnerTask(task) {
+  const taskCreated = `
+    <p>${task.text}</p>
+    <div class="flex gap-5">
+      <button onclick="checkTask(${task.id})">✅</button>
+      <button onclick="editTask(${task.id})">✏️</button>
+      <button onclick="deleteTask(${task.id})">🗑️</button>
+    </div>
+  `;
+
+  const taksDone = `
+    <p class="line-through italic font-thin">${task.text}</p>
+  `;
+  return task.status === 1 ? taskCreated : taksDone;
+}
+
 function saveTasksInLocalStorage() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
@@ -61,12 +77,65 @@ form.onsubmit = (event) => {
   renderTasks();
 };
 
+function checkTask(id) {
+  // Primero estamos actualizando el item del array
+  const task = tasks.find((item) => item.id === id);
+  task.status = 2;
+  saveTasksInLocalStorage();
+  // actualizar la interface
+  cancelEdit(id);
+}
+
 function deleteTask(id) {
   tasks = tasks.filter((task) => task.id !== id);
   // guardar en localStorage
   saveTasksInLocalStorage();
   // render para que vuelva a pintar las tareas
   renderTasks();
+}
+
+function cancelEdit(id) {
+  const taskContainer = document.querySelector(`#task-${id}`);
+  taskContainer.innerHTML = "";
+
+  // Como tenemos el id de la tarea puedo buscar el array
+  const task = tasks.find((item) => item.id === id);
+
+  taskContainer.innerHTML = renderInnerTask(task);
+}
+
+function updateTask(id) {
+  const updatedInputTask = document.querySelector(`#input-task-${id}`);
+  if (updatedInputTask.value === "") {
+    updatedInputTask.classList.add("border-red-500");
+    return;
+  } else {
+    updatedInputTask.classList.remove("border-red-500");
+  }
+  const task = tasks.find((item) => item.id === id);
+  // Primero actualizamos el valor de task.text
+  task.text = updatedInputTask.value;
+  // Hay que actualizar localStorage
+  saveTasksInLocalStorage();
+  cancelEdit(id);
+}
+
+function editTask(id) {
+  const taskContainer = document.querySelector(`#task-${id}`);
+  taskContainer.innerHTML = "";
+  // Ahora vamos a reemplazar ese html por uno que tenga un input y dos botones
+  const html = `
+    <div class="flex justify-between w-full items-center gap-3">
+      <div class="flex-1">
+        <input type="text" id="input-task-${id}" class="outline-none px-4 py-2 border rounded-md w-full" placeholder="Editar tarea" />
+      </div>
+      <div class="flex gap-5">
+        <button onclick="updateTask(${id})">💾</button>
+        <button onclick="cancelEdit(${id})">❌</button>
+      </div>
+    </div>
+  `;
+  taskContainer.innerHTML = html;
 }
 
 function renderTasks() {
@@ -79,13 +148,10 @@ function renderTasks() {
     // operador de adicion +=
     // `String: ${variable}` Template String
     containerTasks.innerHTML += `
-      <div class="flex justify-between px-4 mb-3 py-3 bg-white rounded-md">
-        <p>${task.text}</p>
-        <div class="flex gap-5">
-          <button>✅</button>
-          <button>✏️</button>
-          <button onclick="deleteTask(${task.id})">🗑️</button>
-        </div>
+      <div class="flex justify-between px-4 mb-3 py-3 bg-white rounded-md" id="task-${
+        task.id
+      }">
+        ${renderInnerTask(task)}
       </div>`;
   });
 }
