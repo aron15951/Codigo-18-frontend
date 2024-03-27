@@ -3,6 +3,12 @@ const form = document.querySelector("#form");
 const inputTask = document.querySelector("#input-task");
 const error = document.querySelector("#error");
 const containerTasks = document.querySelector("#container-tasks");
+const modal = document.querySelector("#modal");
+const inputEditTask = document.querySelector("#input-edit-task");
+const formEdit = document.querySelector("#form-edit");
+
+// cuando iniciemos vamos a colocar la clase hidden
+modal.classList.add("hidden");
 
 // Si quiero obtener algo de localStorage y eso no existe este retorna null
 // Pasa que esta variable puede un string o un null
@@ -29,7 +35,7 @@ function renderInnerTask(task) {
     <p>${task.text}</p>
     <div class="flex gap-5">
       <button onclick="checkTask(${task.id})">✅</button>
-      <button onclick="editTask(${task.id})">✏️</button>
+      <button onclick="editTaskWithModal(${task.id})">✏️</button>
       <button onclick="deleteTask(${task.id})">🗑️</button>
     </div>
   `;
@@ -77,6 +83,17 @@ form.onsubmit = (event) => {
   renderTasks();
 };
 
+formEdit.onsubmit = (event) => {
+  // Siempre evitemos que se recargue el navegador
+  event.preventDefault();
+  const id = Number(inputEditTask.dataset.id);
+  const task = tasks.find((item) => item.id === id);
+  task.text = inputEditTask.value;
+  saveTasksInLocalStorage();
+  closeModal();
+  cancelEdit(id);
+};
+
 function checkTask(id) {
   // Primero estamos actualizando el item del array
   const task = tasks.find((item) => item.id === id);
@@ -104,6 +121,10 @@ function cancelEdit(id) {
   taskContainer.innerHTML = renderInnerTask(task);
 }
 
+function closeModal() {
+  modal.classList.add("hidden");
+}
+
 function updateTask(id) {
   const updatedInputTask = document.querySelector(`#input-task-${id}`);
   if (updatedInputTask.value === "") {
@@ -118,6 +139,15 @@ function updateTask(id) {
   // Hay que actualizar localStorage
   saveTasksInLocalStorage();
   cancelEdit(id);
+}
+
+function editTaskWithModal(id) {
+  modal.classList.remove("hidden");
+  // buscar a la tarea
+  const task = tasks.find((item) => item.id === id);
+  inputEditTask.value = task.text;
+  inputEditTask.setAttribute("data-id", id);
+  inputEditTask.focus();
 }
 
 function editTask(id) {

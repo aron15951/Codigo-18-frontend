@@ -1,0 +1,176 @@
+/* style.css */
+body {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    background-color: #000428;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 8%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.head {
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: baseline;
+    padding: 50px;
+}
+
+.head img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.head h1 {
+    font-size: 40px;
+    margin: 5px;
+}
+
+.head p {
+    font-size: 15px;
+    margin: 0;
+}
+
+.container {
+    background-color: #e0e0e0;
+    border-radius: 40px;
+    height: 97vh;
+
+}
+
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    border-bottom: solid;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-icons {
+    display: flex;
+}
+
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.title-container {
+    display: flex;
+    gap: 5px;
+}
+
+
+.column {
+    /* width: 30%; */
+    width: calc(100% - 30px);
+    max-width: 400px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow:
+        0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.column h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.task-input {
+    width: 60%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.task {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: move;
+}
+
+.delete-btn {
+    float: right;
+    cursor: pointer;
+}
+
+.add-task-btn {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    /* Adjust padding to make 
+    the button smaller */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    /* Decrease font size */
+    border-radius: 5px;
+    /* Adjust border radius 
+    for a softer look */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.add-task-btn:hover {
+    background-color: #45a049;
+}
+
+
+#todo .task {
+    background-color: #b3e5fc;
+    /* Light blue */
+}
+
+#in-progress .task {
+    background-color: #ffcdd2;
+    /* Light pink */
+}
+
+#done .task {
+    background-color: #c8e6c9;
+    /* Light green */
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+    cursor: move;
+}
+
+.delete-btn {
+    float: right;
+
+    cursor: pointer;
+}
+
+.tasks-in-btn {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3px;
+
+}

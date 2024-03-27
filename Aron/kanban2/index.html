@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=
+"width=device-width, initial-scale=1.0">
+    <title>kanban</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&family=M+PLUS+Rounded+1c&family=Share+Tech+Mono&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <h1>Elena’s board</h1>
+            <p>El proyecto se encargara del...</p>
+        </div>
+            <nav class="container-nav">
+                <div class="nav-buttons">
+                    <a href="#">Calendar</a>
+                    <a href="#">Board</a>
+                </div>
+                <div class="nav-icons">
+                    <a href="#"><img src="./assets/icons/Trash.svg" alt="Eliminar" class="icon"></a>
+                    <a href="#"> <img src="./assets/icons/Report Card.svg" alt="Menú" class="icon"></a>
+                    <a href="#"><img src="./assets/icons/Color Palette.svg" alt="Ajustes" class="icon"></a>
+                </div> 
+            </nav>
+        
+        <div class="board">
+            <div class="column" id="todo" ondrop="drop(event, 'todo')" 
+                ondragover="allowDrop(event)">
+                <div >
+                    <div class="title-container">
+                    <img src="./assets/icons/Goal.svg" alt="">
+                    <h2>In progress</h2>
+                </div>
+                <div class="counter-task">1</div>
+                </div>
+                <hr>
+                <div class="tasks-in-btn">
+                    <input type="text" id="taskInput" class="task-input" 
+                        placeholder="Enter a task..."
+                        oninput="capitalizeInput(this)">
+                    <button class="add-task-btn" onclick="addTask('todo')">
+                        Add Task
+                    </button>
+                </div>
+                <div class="task-container"></div>
+            </div>
+    
+            <div class="column" id="in-progress" 
+                ondrop="drop(event, 'in-progress')" 
+                ondragover="allowDrop(event)">
+                <div class="title-container">
+                <img src="./assets/icons/Loading.svg" alt="">
+                <h2>In Review</h2>
+                </div>
+                <hr>
+                <div class="task-container"></div>
+            </div>
+            <div class="column" id="done" 
+                ondrop="drop(event, 'done')" 
+                ondragover="allowDrop(event)">
+                <div class="title-container">
+                    <img src="./assets/icons/Checkmark.svg" alt="">
+                <h2>Done</h2>
+            </div>
+                <hr>
+                
+                <div class="task-container"></div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>
